@@ -114,6 +114,7 @@ from .imports import (
     is_transformers_available,
     is_triton_available,
     is_wandb_available,
+    is_weights_only_available,
     is_xpu_available,
 )
 from .modeling import (
@@ -243,6 +244,7 @@ from .other import (
     extract_model_from_parallel,
     get_pretty_name,
     is_port_in_use,
+    load,
     merge_dicts,
     patch_environment,
     recursive_getattr,

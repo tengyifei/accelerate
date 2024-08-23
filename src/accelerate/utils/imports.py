@@ -444,3 +444,7 @@ def is_torchdata_stateful_dataloader_available():
         torchdata_version = version.parse(importlib.metadata.version("torchdata"))
         return compare_versions(torchdata_version, ">=", "0.8.0")
     return False
+
+
+def is_weights_only_available():
+    return is_torch_version(">=", "2.0.0")
