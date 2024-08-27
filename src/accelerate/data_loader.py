@@ -641,7 +641,7 @@ if is_torch_xla_available():
         """
 
         def __init__(self, dataloader: DataLoaderShard, device: torch.device):
-            super().__init__(dataloader, device)
+            super().__init__(dataloader, device, loader_prefetch_size=16, device_prefetch_size=8)
             self._rng_types = self._loader.rng_types
             self._loader.rng_types = None
             self.device = device
